@@ -1,0 +1,16 @@
+<p>cars works!</p>
+
+<div *ngIf="hideCars">
+    <h2>Cars:</h2>
+      <p *ngFor="let car of cars">
+        {{ car.make }}
+        {{ car.model }} 
+        ({{ car.year }})
+      </p>
+   
+  </div>
+  
+  <button (click)="toggleCars()">
+    {{ hideCars ? 'Hide Cars' : 'Show Cars' }}
+  </button>
+  
